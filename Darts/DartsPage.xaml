@@ -17,8 +17,8 @@
         <Grid RowSpacing="0"
               ColumnSpacing="0">
           <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
             <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
           </Grid.RowDefinitions>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
@@ -26,15 +26,19 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="200" />
           </Grid.ColumnDefinitions>
-            <StackLayout Grid.Row="0"
+            <StackLayout Grid.Row="1"
                          Grid.Column="0"
                          BackgroundColor="Navy">
-                
+
+                <Label Text="Home" 
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       FontSize="60"/>
             </StackLayout>
             <syncfusion:SfDataGrid x:Name="dataGrid"
                                    Grid.Column="1"
                                    Grid.ColumnSpan="2"
-                                   Grid.Row="0"
+                                   Grid.Row="1"
                                    ColumnSizer="Star"
                                    LiveDataUpdateMode="AllowSummaryUpdate"
                                    AutoGenerateColumns="false"
@@ -61,15 +65,19 @@
                                                    AllowEditing="false" />
                     </syncfusion:SfDataGrid.Columns>
             </syncfusion:SfDataGrid>
-            <StackLayout Grid.Row="0"
+            <StackLayout Grid.Row="1"
                          Grid.Column="3"
                          BackgroundColor="Navy">
-            
+                <Label Text="Away" 
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       FontSize="60"/>
             </StackLayout>
             <Label x:Name="lblHomeRemaining"
                    Text="240"
                    FontSize="200"
-                   Grid.Row="1"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
                    Grid.Column="0"
                    Grid.ColumnSpan="2"
                    BackgroundColor="Teal"/>
@@ -77,8 +85,9 @@
             <Label x:Name="lblAwayRemaining"
                    Text="225"
                    FontSize="200"
+                   FontAttributes="Bold"
                    HorizontalTextAlignment="End"
-                   Grid.Row="1"
+                   Grid.Row="0"
                    Grid.Column="2"
                    Grid.ColumnSpan="2"
                    BackgroundColor="Teal"/>
